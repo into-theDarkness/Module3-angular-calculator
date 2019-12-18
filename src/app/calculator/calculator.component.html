@@ -1,0 +1,17 @@
+<h2>Calculator</h2>
+<label>
+  Tham so thu nhat:
+  <input type="text" [value]="thamso1" (change)="onFirstChange($event.target.value)">
+  <select [value]="pheptinh" (change)="onSelectChange($event.target.value)">
+    <option value="cong">+</option>
+    <option value="tru">-</option>
+    <option value="nhan">*</option>
+    <option value="chia">/</option>
+  </select>
+  Tham so thu hai:
+  <input type="text" [value]="thamso2" (change)="onSecondChange($event.target.value)"><br>
+  <button (click)="calculate()">Calculate</button>
+</label>
+<h3>
+  Result: {{result}}
+</h3>
